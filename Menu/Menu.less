@@ -16,6 +16,8 @@
   border-bottom: none;
   z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
   transform: translate(-350px, 0px);
+  transition-timing-function: ease-in;
+  transition: all 0.3s;
 }
 
 .menu ul li {
@@ -28,5 +30,5 @@
 .menu--open {
   transform: translate(0px, 0px);
   transition-timing-function: ease-out;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
