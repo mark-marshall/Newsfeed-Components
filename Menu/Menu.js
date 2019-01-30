@@ -1,32 +1,28 @@
-//Testing new event handlerr
-
+// Define menu, menu-button, and body constants
+const menu = document.querySelector('.menu');
+const menuButton = document.querySelector('.menu-button');
 const body = document.querySelector('body');
-console.log(body);
 
+// Close menu when body is clicked
 const closeMenu = () => {
-  // Toggle the "menu--open" class on your menu refence.
-  //console.dir(e.target);
   menu.classList.remove('menu--open');
 };
 
+// Body click event listener
 body.addEventListener('click', closeMenu);
 
-const toggleMenu = e => {
-  // Toggle the "menu--open" class on your menu refence.
+// Toggle the "menu--open" class on your menu refence.
+const toggleMenu = (e) => {
   menu.classList.toggle('menu--open');
   e.stopPropagation();
 };
 
-const keepMenuOpen = e => {
-  // Toggle the "menu--open" class on your menu refence.
+// Keep menu open when the target is the menu itself
+const keepMenuOpen = (e) => {
   menu.classList.add('menu--open');
   e.stopPropagation();
 };
 
-// Start Here: Create a reference to the ".menu" class
-const menu = document.querySelector('.menu');
-// create a reference to the ".menu-button" class
-const menuButton = document.querySelector('.menu-button');
-// Using your menuButton reference, add a click handler that calls toggleMenu
+// Click handlers for the menu-button and menu
 menuButton.addEventListener('click', toggleMenu);
 menu.addEventListener('click', keepMenuOpen);
