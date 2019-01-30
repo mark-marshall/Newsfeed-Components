@@ -37,12 +37,17 @@
     color: grey;
     cursor: pointer;
     transform: translate(-50%);
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
     background-color: white;
   }
 }
 
 .article-open {
   height: 400px;
+  transform: translate(0px, 0px);
+  transition-timing-function: ease-out;
+  transition: all 0.5s;
 }
 
 
